@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://gwyog.github.io/minecraft%20mod/What_you_should_know_about_Minecraft_mods.html">
+  <link rel="alternate" type="application/rss+xml" title="GWYOG's Blog" href="https://gwyog.github.io/feed.xml">
+
+<!-- Google font -->
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>What you should know about Minecraft mods</title>
+  <meta name="description" content="What you should know about Minecraft mods">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">What you should know about Minecraft mods</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="11 Jun 2016" itemprop="datePublished">Jun 11 2016</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">GWYOG</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="https://gwyog.github.io/tags/">Share</a>
+        
+		<a class="post-tags-item" href="https://gwyog.github.io/tags/">Minecraft_Mod</a>
+        
+	</div>
+    </center>
+    
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p>基础概念、Git与Github使用简介、许可证(License)简介、反编译与反混淆、持续集成与mod的构建、汉化mod与提交、如何看懂坠毁报告、如何科学地查看mod的源码</p>
+	
+    </center>
+	<h2>Directory</h2>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="what-you-should-know-about-minecraft-mods">What you should know about Minecraft mods</h2>
+
+<p>作为第一篇博文，我开了一个大坑=_=|||<br />
+在这篇文章中，我将按照个人的一点心得，科普性质地介绍关于Minecraft Mod(1.7.10+)我认为比较重要的一些知识。知道了这些，相信你会对Minecraft Mod有一个更好的认识。<br />
+正如副标题所写的，本文将分为以下几个小节：<br />
+* 基础概念(关于java、Minecraft、Forge等)<br />
+* 许可证(License)概览 <br />
+* Git与Github使用简介<br />
+* 反编译与反混淆<br />
+* 持续集成与mod的构建<br />
+* 汉化mod与提交<br />
+* 如何看懂坠毁报告<br />
+* 如何科学地查看mod的源码<br />
+所讲内容将由浅入深，不过如果你对某一个小节很熟悉的话，跳过也无妨。废话不多说了，现在就正式开始这篇教程吧！</p>
+
+<h1 id="section">一、基础概念</h1>
+<p><strong>1.关于java的一些名词解释</strong><br />
+<strong>(1) JVM</strong><br />
+JVM，全称是Java Virtual Machine，翻译过来就叫java虚拟机。<br />
+用过虚拟机的人都该知道虚拟机是干什么的，java虚拟机实际上也差不多。它提供了一个虚拟的环境，让java的代码可以在不同的操作系统上运行。<br />
+毕向东老师曾经举过一个形象的例子，他把JVM比作GBA模拟器(VBA)。正是由于这种模拟器的存在，原本卡带中需要在掌机上运行的程序才能在计算机上运行。JVM充当的就是这样的角色，它是java跨平台的根本保证。同样作为面向对象的语言，C++虽然拥有着出色的效率，但在这点上它就不如JAVA了。<br />
+JVM这个名词在Minecraft中并不少见。比如说在许多启动器中都会有一条“JVM启动参数”，这个参数决定了JVM的配置，对客户端/服务端都非常重要。不过大多数启动器会把JVM启动参数做成可视化的界面让用户选择，因此单机的话一般也用不太到它了。(但这个参数不可以乱配置，不然会提示JVM无法创建而启动不了游戏)</p>
+
+<p><strong>(2) JRE</strong><br />
+JRE，全称是Java Runtime Environment，中文名叫Java运行环境。<br />
+我们一般所说的“玩Minecraft前先装Java”中的Java指的就是JRE(除了JRE以外还有JDK，下面会讲)。<br />
+JRE有不同的版本，玩原版Minecraft的话Java6/7/8都可以。但是玩Mod的时候事情就没这么简单了，许多Mod作者可能会使用一些Java8的内容编写代码，或者使用Java8来编译(即把源代码变成Mod的过程)。这些很可能会导致在启动游戏或是加载游戏时Minecraft崩溃。因此如果可以的话，还是尽量用Java8来进行游戏。<br />
+举个简单的例子，1.9.4的Extra Utilities只能使用Java8来玩。</p>
+
+<p><strong>(3) JDK</strong><br />
+JDK，全称是Java Development Kit,中文名叫Java开发者工具，是专门给使用Java编写代码的人用的。<br />
+作为玩家，在玩Minecraft时安装JRE就行了；但作为Mod作者，则需要使用JDK。不过在安装JDK的时候，同时会一并安装一个相同版本的JRE。因此，装了JDK后也就不用再装JRE了。<br />
+对于JVM，JRE和JDK，它们是种层层包含的关系，即有JVM&lt;JRE&lt;JDK。</p>
+
+<p><strong>(4) 编译与.jar文件</strong><br />
+编译是把人能看得懂的代码转变成机器语言的过程。机器读不懂人类的语言，人类也读不懂机器的语言。<br />
+在Java中，编译的概念稍微有些不同。由于JVM(Java虚拟机)的存在，源代码并不是直接被编译成机器语言，而是变成JVM读得懂的字节码(Byte Code)，再由不同平台对应的不同的JVM将字节码解释为机器语言(这个部分离我们就有点远了)。这个过程保证了Java跨平台的特性，但与此同时却降低了Java的执行效率。
+Java的源代码都是存在.java文件中，编译后的字节码存在.class文件中。在mod的.jar文件中，只能看到.class文件，没有.java文件，因此我们需要使用反编译的软件进行反编译才能看到源码(实际上，由于Minecraft对于代码的保护，我们还需要反混淆，不过这些等到后面的小节再谈)。<br />
+mod的.jar文件类似一个文件夹，里面包括了mod相关的代码(字节码形式)、材质、音效、语言文本等文件。如果想要查看其里面的内容，只需要右击.jar文件，选择使用解压缩软件(比如WinRAR)打开就行了。如果要修改其里面的文件，拖拽外部的文件进来覆盖或者把里面的文件删除就可以了。不过需要注意的是，许多mod的作者很重视对于它们的mod的保护，这样对.jar进行修改的行为很可能违反了他们的许可证(License)。如果不是十分确定，修改后的.jar文件请不要公开发布(包括汉化文件，也请不要自己直接添加进去)。</p>
+
+<p>(未完待续，以上内容可能有误，日后有空会再做校正的:P)</p>
+
+</div>
+
+<div>
+	
+	<div class="tbc"></div>
+	
+</div>
+
+<div class="share">
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=What you should know about Minecraft mods@CN_JJN&amp;url=https://gwyog.github.io/minecraft%20mod/What_you_should_know_about_Minecraft_mods.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+    
+	<a href="https://www.facebook.com/sharer/sharer.php?u=https://gwyog.github.io/minecraft%20mod/What_you_should_know_about_Minecraft_mods.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+    
+	<a href="https://plus.google.com/share?url=https://gwyog.github.io/minecraft%20mod/What_you_should_know_about_Minecraft_mods.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+
+
+<div id="disqus_thread"></div>
+
+
+ 
+</div>
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <center>
+        
+		<p><a class="link" href="/archive/">Archive</a> /
+		<a class="link" href="/category/">Category</a> / 
+		<a class="link" href="/tags/">Tags</a> / 
+		<a class="link" href="/about/">About</a>
+        </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+        
+		<a class="link" href="">GWYOG's Blog</a>
+		<br>
+		<span>Theme &copy; <a class="link" href="https://twitter.com/itisbenjamin1" target="_blank"> Ben</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="91px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=itisbenjamin&repo=Nice_Blog&type=star&count=true" >
+		</iframe>
+
+    </center>
+    
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/js/main.js"></script>
+
+</foot>
+
+
+</foot>
+
+</html>

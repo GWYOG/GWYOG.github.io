@@ -1,69 +1,19 @@
 Welcome
 =======
+This is a blog which I use to write down some private things and share my own experience on many things. These words may be somehow subjective, which means that they are likely to be wrong and mislead others. However, if you are really interested in the topic, I will give you a warm welcome since these words are really what I'm eager to express and expected to be seen by a small amount of people. Really paradoxical, isn't it?  
+(But if some of these words are mature to see the sunlight, I may release them to Baidu Postbar someday.)
 
-I think many blog themes are over designed, so I created this one. 
+Credit
+=======   
+Credit for the [Nice_Blog](https://github.com/itisbenjamin/Nice_Blog) template by [Benjamin](https://github.com/itisbenjamin).  
+If you like this simple style, please go and visit his repository. Star and fork it, I am sure you'll like it!  
+(By the way, his repository is under the [MIT License]((https://github.com/itisbenjamin/Nice_Blog/blob/master/LICENSE)), which is rather loose.) 
 
-Just for using, not showing off.
-
-Nice Blog  [![Build Status](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/itisbenjamin/Nice_Blog)  [![release](https://img.shields.io/github/release/itisbenjamin/Nice_Blog.svg)](https://github.com/itisbenjamin/Nice_Blog/releases)
-========
-
-A Simple Jekyll Blog Theme.
-
-[![Demo](https://img.shields.io/badge/Demo-Nice Blog-green.svg)](http://benjaminblog.ml/Nice_Blog)
-
-![index-page](https://itisbenjamin.github.io/Nice_Blog/img/blog/index.png)
-
-Introduce yourself in `About` page  :
-![about-page](https://itisbenjamin.github.io/Nice_Blog/img/blog/about.png)
-
-And you can turn on or off your skills tree in `_config.yml` :  
-![skills-tree](https://itisbenjamin.github.io/Nice_Blog/img/blog/skillstree.png)
-
-Posts will be listed by year in `Archive` page:  
-![archive-page](https://itisbenjamin.github.io/Nice_Blog/img/blog/archive.png)
-
-Posts will be listed by category in `Category` page:  
-![category-page](https://itisbenjamin.github.io/Nice_Blog/img/blog/category.png)
-
-Posts will be listed by tag in `Tags` page:  
-![tags-page](https://itisbenjamin.github.io/Nice_Blog/img/blog/tags.png)
-
-You can put your `PGP` publickey in `Contact` page:  
-![contact-page](https://itisbenjamin.github.io/Nice_Blog/img/blog/contact.png)
-
-Now you have a `404` page and it will jump back to `index` page itself:  
-![404-page](https://itisbenjamin.github.io/Nice_Blog/img/blog/404.png)
-
-How to use
-=========
-
-![GitHub stars](https://img.shields.io/github/stars/itisbenjamin/Nice_Blog.svg?style=social&&label=Star) it, ![GitHub forks](https://img.shields.io/github/forks/itisbenjamin/Nice_Blog.svg?style=social&&label=Fork) it, and Download it.
-
-``` sh
-$ git clone https://github.com/itisbenjamin/Nice_Blog.git
-```
-
-Change the settings in `_config.yml` file and then you can use this theme.
-
-Easy, right? 
-
-If you wanna do more, then change whatever you want. But first, you should know what you are doing. 
-
-If you make all codes a mess, do not worry, just come back and download again.
-
-Have fun.
-
-Author  [![Twitter](https://img.shields.io/badge/awesome-Ben-66BAB7.svg)](https://twitter.com/itisbenjamin1)
+License
 ======
+All the stuffs in my blog like the articles and pictures are under [CC BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).  
+This license may be a little bit rigid. But I think it may be the most suitable one since the words are subjective and may not be suitable for everyone.  
+It's just a blog, not a tutorial or a wiki, isn't it?
 
-A normal person just wanna see this world.
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/itisbenjamin1.svg?style=social)](https://twitter.com/itisbenjamin1)
-
-License  [![License](https://img.shields.io/npm/l/express.svg)](https://github.com/itisbenjamin/Nice_Blog/blob/master/LICENSE)
-======
-
-Use MIT License.
 
 
