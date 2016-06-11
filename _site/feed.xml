@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GWYOG&#39;s Blog</title>
+    <description>GWYOG&#39;s Blog to log some private things.
+</description>
+    <link>https://itisbenjamin.github.io/Nice_Blog/</link>
+    <atom:link href="https://itisbenjamin.github.io/Nice_Blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 11 Jun 2016 16:20:05 +0800</pubDate>
+    <lastBuildDate>Sat, 11 Jun 2016 16:20:05 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Welcome to Nice Blog</title>
+        <description>&lt;h2 id=&quot;welcome&quot;&gt;Welcome&lt;/h2&gt;
+
+&lt;p&gt;!!!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 30 Mar 2016 00:00:00 +0800</pubDate>
+        <link>https://itisbenjamin.github.io/Nice_Blog/jekyll/welcome.html</link>
+        <guid isPermaLink="true">https://itisbenjamin.github.io/Nice_Blog/jekyll/welcome.html</guid>
+        
+        <category>test</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+  </channel>
+</rss>
