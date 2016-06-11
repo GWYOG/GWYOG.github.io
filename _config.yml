@@ -4,7 +4,7 @@ name: GWYOG's Blog
 email: jjn1jjn2@163.com
 description: >
     GWYOG's Blog to log some private things.
-baseurl: "/Nice_Blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gwyog.github.io" # the base hostname & protocol for your site
 twitter_username: CN_JJN
 github_username: GWYOG
